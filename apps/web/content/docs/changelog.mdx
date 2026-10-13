@@ -4,6 +4,28 @@ title: "Changelog"
 
 Notable changes and updates to json-render.
 
+## v0.21.1
+
+October 13, 2026
+
+### Fixed: Dotted Form Values
+
+Form value lookups now preserve literal emails, URLs, and version strings instead of treating them as missing state paths.
+
+### Fixed: Numeric Validation
+
+The `numeric` validator now rejects partially numeric strings such as `"123abc"`, empty strings, and whitespace-only strings instead of accepting them as numbers.
+
+### Fixed: Schema Type Inference
+
+`s.any()` fields now infer as `any`, matching `z.any()`, so validated specs remain assignable to `Spec` without casts.
+
+### Improved: Documentation
+
+Migrated the docs site to Geistdocs while preserving public URLs, page content, and anchors. Updated native WebMCP discovery and search with the Geistdocs MCP adapter.
+
+---
+
 ## v0.21.0
 
 September 18, 2026
