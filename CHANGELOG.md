@@ -1,8 +1,30 @@
 # Changelog
 
-## 0.21.0
+## 0.21.1
 
 <!-- release:start -->
+
+### Bug Fixes
+
+- **Dotted form values:** Preserve literal emails, URLs, and version strings in form value lookups instead of treating them as missing state paths (#353)
+- **Numeric validation:** Reject partially numeric strings such as `"123abc"`, empty strings, and whitespace-only strings instead of accepting them as numbers (#389)
+- **Schema type inference:** Infer `s.any()` fields as `any`, matching `z.any()`, so validated specs remain assignable to `Spec` without casts (#390)
+
+### Documentation
+
+- Migrated the **docs site** to Geistdocs while preserving public URLs, page content, and anchors (#340)
+- Updated **native WebMCP discovery and search** with the Geistdocs MCP adapter (#363)
+
+### Contributors
+
+- @ctate
+- @Railly
+- @fix2015
+- @kevin9327
+- @tmchow
+<!-- release:end -->
+
+## 0.21.0
 
 ### New Features
 
@@ -19,7 +41,6 @@
 
 - @ctate
 - @Railly
-<!-- release:end -->
 
 ## 0.20.0
 
